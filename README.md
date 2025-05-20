@@ -146,11 +146,11 @@ eclipse/eclipse
 ```
 
 ## Criar banco de dados inicial
-### Caso peça senha utilizar senha criada na criação do usuario ubuntu
+### Caso o comando solicitar utilizar senha criada na criação do usuario ubuntu
 ```bash
 sudo su - postgres
 ```
-### Caso peça senha utilizar adempiere
+### Caso o comando solicitar senha utilizar adempiere
 ```bash
 createdb  --template=template0 -E UNICODE -O adempiere -U adempiere idempiere
 ```
@@ -163,3 +163,16 @@ psql -d idempiere -U adempiere -c 'CREATE EXTENSION "uuid-ossp"'
 ```bash
 exit
 ```
+
+### Exporta dmp do banco de dados
+```bash
+cd /tmp
+```
+```bash
+jar xvf ~/idempiere/org.adempiere.server-feature/data/seed/Adempiere_pg.jar
+```
+### Caso o comando solicitar senha utilizar adempiere
+```bash
+psql -d idempiere -U adempiere -f Adempiere_pg.dmp
+```
+
