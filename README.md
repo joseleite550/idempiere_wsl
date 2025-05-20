@@ -62,11 +62,18 @@ git checkout release-11
 ```
 ### Inatalando postgresql 15
 ```bash
-chmod +x install_postgresql.sh
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 ```
 ```bash
-bash install_postgresql.sh
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get install postgresql-15
+```
+
 ### Abrindo o arquivo: /etc/postgresql/15/main/pg_hba.conf
 ```bash
 sudo nano /etc/postgresql/15/main/pg_hba.conf
