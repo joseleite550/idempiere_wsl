@@ -51,9 +51,8 @@ sudo apt-get install openjdk-17-jdk-headless
 ```
 
 ## Preparando projeto
-```bash
-git clone git@github.com:idempiere/idempiere.git
-```
+## Acesse https://github.com/idempiere/idempiere e faça um fork do projeto do idempiere
+### Clone o projeto do fork criado no git pessoal
 ```bash
 cd idempiere
 ```
