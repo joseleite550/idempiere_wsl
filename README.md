@@ -20,7 +20,7 @@ Continuous integration when changing this repository is managed with Jenkins at 
 
 ## Instale o wsl 
 ```bash
-wsl -–install
+wsl -–install -d Ubuntu
 ```
 
 ## Configure a chave ssh do git e cadastre a nova chave gerada no github
