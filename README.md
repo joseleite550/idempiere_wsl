@@ -48,6 +48,8 @@ ssh-add ~/.ssh/id_rsa
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
+![image](https://github.com/user-attachments/assets/7e571126-16d7-4418-ab8d-d84bfaacc7e2)
+
 ### Copie a chave exibida em tela e acesse: https://github.com/settings/keys para cadastrá-la.
 
 ![image](https://github.com/user-attachments/assets/68fcd60b-2a9e-47bb-96fb-e106e16e12d8)
@@ -63,6 +65,10 @@ cat ~/.ssh/id_rsa.pub
 ```bash
 ssh -T git@github.com
 ```
+
+### Resultado esperado
+
+![image](https://github.com/user-attachments/assets/e14e9731-1589-4f13-92f7-721ef9b40970)
 
 ## Com tudo pronto, vamos instalar a JDK 17. Execute os comandos abaixo:
 
