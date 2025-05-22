@@ -52,6 +52,10 @@ cat ~/.ssh/id_rsa.pub
 
 ![image](https://github.com/user-attachments/assets/68fcd60b-2a9e-47bb-96fb-e106e16e12d8)
 
+## Cole a chave copiada no bloco key e de um nome para essa chave em title
+
+![image](https://github.com/user-attachments/assets/56e8391f-f20b-45e7-9bfa-5a668beb6b1d)
+
 #### Duvidas sobre como adicionar chave ssh no git ?. Acesse: https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 
 ## Após adicionar a nova chave ssh no git, execute o comando abaixo no WSL para testar a conexão:
