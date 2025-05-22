@@ -85,14 +85,31 @@ sudo apt-get install openjdk-17-jdk-headless
 ## Acesse https://github.com/idempiere/idempiere e faça um fork do projeto do idempiere
 ![image](https://github.com/user-attachments/assets/8506be99-2b96-4dca-be41-6911bd54f8be)
 
-### Clone o projeto do fork criado no git pessoal
+## Após realizar o fork do projeto iDempiere para o seu repositório pessoal, acesse-o através da seção de repositórios no seu perfil e abra-o.
+
+### Vá até a opção 'Code', selecione a aba 'SSH' e, em seguida, copie o link exibido.
+
+![image](https://github.com/user-attachments/assets/800141ff-fd98-459b-9a55-0810f19ea557)
+
+## Após copiar o link, volte ao terminal do WSL e execute os comandos para clonar o projeto.
+
+### Exemplo 
+
+![image](https://github.com/user-attachments/assets/7ad4f8ed-6808-43e0-bfa4-d3ab85c77753)
+
+```bash
+git clone cole_o_link
+```
+### Entre no diretório do idempiere
 ```bash
 cd idempiere
 ```
+### Altere a branch para release-11
 ```bash
 git checkout release-11
 ```
-### Inatalando postgresql 15
+
+## Inatalando postgresql 15
 ```bash
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 ```
