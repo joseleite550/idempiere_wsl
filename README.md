@@ -26,9 +26,9 @@ wsl --install -d Ubuntu
 
 ### Durante a instalação do WSL, será solicitado um nome de usuário e uma senha para criação do usuário com permissões de sudo. Atenção: o terminal não exibe a digitação da senha. Crie uma senha fácil de lembrar, pois ela será utilizada em outras situações.
 
-## Configuração da chave SSH para utilizar o GitHub
+# Configuração da chave SSH para utilizar o GitHub
 
-### Execute os seguintes comandos dentro do WSL para criar uma chave SSH que será utilizada no GitHub:
+## Execute os seguintes comandos dentro do WSL para criar uma chave SSH que será utilizada no GitHub:
 
 #### Nesses passos, apenas confirme as ações solicitadas:
 
@@ -81,7 +81,7 @@ sudo apt-get install openjdk-17-jdk-headless
 ```
 
 
-## Preparando projeto
+# Preparando projeto
 ## Acesse https://github.com/idempiere/idempiere e faça um fork do projeto do idempiere
 ![image](https://github.com/user-attachments/assets/8506be99-2b96-4dca-be41-6911bd54f8be)
 
@@ -108,8 +108,12 @@ cd idempiere
 ```bash
 git checkout release-11
 ```
-
-## Inatalando postgresql 15
+### Saia do diretório do idempiere
+```bash
+cd ..
+```
+# Inatalação do postgres 15
+## Execute os comandos abaixo:
 ```bash
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 ```
@@ -123,23 +127,29 @@ sudo apt-get update
 sudo apt-get install postgresql-15
 ```
 
-### Abrindo o arquivo: /etc/postgresql/15/main/pg_hba.conf
+## Abra o arquivo: /etc/postgresql/15/main/pg_hba.conf com nano
 ```bash
 sudo nano /etc/postgresql/15/main/pg_hba.conf
 ```
-#### Altere a Linha
+### Altere a Linha
 ```
 local   all             all                                     peer
 ```
-#### Para
+### Para
 ```
 local   all             all                                     scram-sha-256
 ```
-### Iniciando o serviço do postgres 
+
+### Após alterar a linha, pressione Ctrl + X (segure a tecla Ctrl e, sem soltá-la, pressione a tecla X) para iniciar o processo de saída do editor Nano.
+Em seguida, tecle Y para confirmar que deseja salvar as alterações feitas no arquivo.
+Por fim, pressione Enter para confirmar o nome do arquivo e concluir a gravação.
+Dessa forma, você sairá do Nano e o arquivo será salvo com as modificações.
+
+## Iniciando o serviço do postgres 
 ```bash
 sudo service postgresql reload
 ```
-## Criando usuário postgres
+### Criando usuário postgres
 ```bash
 sudo su - postgres
 ```
@@ -150,7 +160,7 @@ psql -U postgres -c "CREATE ROLE adempiere SUPERUSER LOGIN PASSWORD 'adempiere'"
 exit
 ```
 
-# Instale o Maven 
+# Instalação do maven, execute:
 ```bash
 wget https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz -O maven.tar.gz
 ```
@@ -161,7 +171,7 @@ tar -xvzf maven.tar.gz
 sudo mv apache-maven-3.9.8 /opt/maven
 ```
 
-### Abra o arquivo bashrc
+## Abra o arquivo bashrc no nano
 ```bash
 nano ~/.bashrc
 ```
@@ -170,7 +180,12 @@ nano ~/.bashrc
 export M2_HOME=/opt/maven
 export PATH=$M2_HOME/bin:$PATH
 ```
-#### Reload no arquivo
+### Após adicionar as linhas, pressione Ctrl + X (segure a tecla Ctrl e, sem soltá-la, pressione a tecla X) para iniciar o processo de saída do editor Nano.
+Em seguida, tecle Y para confirmar que deseja salvar as alterações feitas no arquivo.
+Por fim, pressione Enter para confirmar o nome do arquivo e concluir a gravação.
+Dessa forma, você sairá do Nano e o arquivo será salvo com as modificações.
+
+### Após adicionarmos as linhas ao arquivo, é necessário que o sistema recarregue as configurações. Para isso, execute o seguinte comando:
 ```bash
 source ~/.bashrc
 ```
