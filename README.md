@@ -68,7 +68,7 @@ ssh -T git@github.com
 
 ### Resultado esperado
 
-![image](https://github.com/user-attachments/assets/e14e9731-1589-4f13-92f7-721ef9b40970)
+![image](https://github.com/user-attachments/assets/209a9d8d-964a-4a03-96f3-222edfd08559)
 
 ## Com tudo pronto, vamos instalar a JDK 17. Execute os comandos abaixo:
 
