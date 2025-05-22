@@ -112,8 +112,10 @@ git checkout release-11
 ```bash
 cd ..
 ```
-# Inatalação do postgres 15
-## Execute os comandos abaixo:
+# Inatalações necessárias para trabalhar com Idempiere:
+
+## Inatalação do postgres 15
+### Execute os comandos abaixo:
 ```bash
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 ```
@@ -127,15 +129,15 @@ sudo apt-get update
 sudo apt-get install postgresql-15
 ```
 
-## Abra o arquivo: /etc/postgresql/15/main/pg_hba.conf com nano
+### Abra o arquivo: /etc/postgresql/15/main/pg_hba.conf com nano
 ```bash
 sudo nano /etc/postgresql/15/main/pg_hba.conf
 ```
-### Altere a Linha
+#### Altere a Linha
 ```
 local   all             all                                     peer
 ```
-### Para
+#### Para
 ```
 local   all             all                                     scram-sha-256
 ```
@@ -145,11 +147,11 @@ Em seguida, tecle Y para confirmar que deseja salvar as alterações feitas no a
 Por fim, pressione Enter para confirmar o nome do arquivo e concluir a gravação.
 Dessa forma, você sairá do Nano e o arquivo será salvo com as modificações.
 
-## Iniciando o serviço do postgres 
+### Iniciando o serviço do postgres 
 ```bash
 sudo service postgresql reload
 ```
-### Criando usuário postgres
+#### Criando usuário postgres
 ```bash
 sudo su - postgres
 ```
@@ -160,7 +162,7 @@ psql -U postgres -c "CREATE ROLE adempiere SUPERUSER LOGIN PASSWORD 'adempiere'"
 exit
 ```
 
-# Instalação do maven, execute:
+## Instalação do maven, execute:
 ```bash
 wget https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz -O maven.tar.gz
 ```
@@ -171,11 +173,11 @@ tar -xvzf maven.tar.gz
 sudo mv apache-maven-3.9.8 /opt/maven
 ```
 
-## Abra o arquivo bashrc no nano
+### Abra o arquivo bashrc no nano
 ```bash
 nano ~/.bashrc
 ```
-#### Adicione as linhas no final do arquivo
+##### Adicione as linhas no final do arquivo
 ```
 export M2_HOME=/opt/maven
 export PATH=$M2_HOME/bin:$PATH
@@ -190,12 +192,7 @@ Dessa forma, você sairá do Nano e o arquivo será salvo com as modificações.
 source ~/.bashrc
 ```
 
-## Build maven
-```bash
-mvn verify
-```
-
-# Na home do WSL ~ Rode o comando para instalar e abrir o eclipse
+## Instalação da IDE Eclipse
 ```bash
 wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-03/R/eclipse-jee-2023-03-R-linux-gtk-x86_64.tar.gz -O eclipse-jee.tar.gz
 ```
@@ -205,8 +202,15 @@ tar -xvzf eclipse-jee.tar.gz
 ```bash
 sudo apt-get install -y libswt-gtk-4-java
 ```
+
+# Agora, vamos executar o processo de build do projeto iDempiere. Siga os comandos abaixo:
+## Volte para o diretório do idempiere
 ```bash
-eclipse/eclipse
+cd idempiere
+```
+## Para buildar o projeto, execute:
+```bash
+mvn verify
 ```
 
 ## Criar banco de dados inicial
@@ -240,3 +244,10 @@ jar xvf ~/idempiere/org.adempiere.server-feature/data/seed/Adempiere_pg.jar
 psql -d idempiere -U adempiere -f Adempiere_pg.dmp
 ```
 
+## Abrindo Eclipse
+```bash
+cd
+```
+```bash
+eclipse/eclipse
+```
