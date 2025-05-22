@@ -18,7 +18,7 @@ Continuous integration when changing this repository is managed with Jenkins at 
 
 # Inicialização rápida do sistema para desenvolvimento
 
-## Para começarmos a trabalhar com o iDempiere, vamos utilizar o WSL. Execute o comando abaixo para instalar o WSL:
+## Para começarmos a trabalhar com o iDempiere, vamos utilizar o WSL. Execute o comando abaixo dentro de um terminal do powershell para instalar o WSL:
 
 ```bash
 wsl --install -d Ubuntu
@@ -44,13 +44,15 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-## Após gerar a chave, execute o comando abaixo, copie a chave gerada e acesse: https://github.com/settings/keys para cadastrá-la.
-
+## Após gerar a chave, execute o comando abaixo
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
+### Copie a chave exibida em tela e acesse: https://github.com/settings/keys para cadastrá-la.
 
-## Após copiar, execute o comando abaixo para testar a conexão:
+#### Duvidas sobre como adicionar chave ssh no git ?. Acesse: https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+## Após adicionar a nova chave ssh no git, execute o comando abaixo no WSL para testar a conexão:
 
 ```bash
 ssh -T git@github.com
@@ -69,6 +71,8 @@ sudo apt-get install openjdk-17-jdk-headless
 
 ## Preparando projeto
 ## Acesse https://github.com/idempiere/idempiere e faça um fork do projeto do idempiere
+![image](https://github.com/user-attachments/assets/8506be99-2b96-4dca-be41-6911bd54f8be)
+
 ### Clone o projeto do fork criado no git pessoal
 ```bash
 cd idempiere
