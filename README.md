@@ -70,6 +70,23 @@ ssh -T git@github.com
 
 ![image](https://github.com/user-attachments/assets/209a9d8d-964a-4a03-96f3-222edfd08559)
 
+## Caso aconteça o erro de permissão na porta 22, Execute:
+
+```bash
+cat << EOF > ~/.ssh/config
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  User git
+EOF
+```
+
+## Teste novamente:
+
+```bash
+ssh -T git@github.com
+```
+
 ## Com tudo pronto, vamos instalar a JDK 17. Execute os comandos abaixo:
 
 ```bash
@@ -250,4 +267,10 @@ cd
 ```
 ```bash
 eclipse/eclipse
+```
+
+### Para atualizar o banco de dados 
+
+```bash
+bash RUN_SyncDBDev.sh
 ```
