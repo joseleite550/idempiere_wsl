@@ -274,3 +274,9 @@ eclipse/eclipse
 ```bash
 bash RUN_SyncDBDev.sh
 ```
+
+```bash
+psql -U postgres -c "drop database idempiere;"
+```
+
+
