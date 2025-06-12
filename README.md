@@ -268,6 +268,13 @@ cd
 ```bash
 eclipse/eclipse
 ```
+### Irá abrir o dialog de inicio do eclipse, clique em Browse...
+
+![image](https://github.com/user-attachments/assets/cb1dae8b-de62-4f05-b34d-a6cbdb1cdb76)
+
+### Encrontre a pasta do projeto idempiere, selecione e clique em open
+
+![image](https://github.com/user-attachments/assets/9ab3f5db-f604-40e8-8c4d-ab18e4610c2e)
 
 ### Para atualizar o banco de dados 
 
