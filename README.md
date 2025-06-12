@@ -117,19 +117,8 @@ sudo apt-get install openjdk-17-jdk-headless
 ```bash
 git clone cole_o_link
 ```
-### Entre no diretório do idempiere
-```bash
-cd idempiere
-```
-### Altere a branch para release-11
-```bash
-git checkout release-11
-```
-### Saia do diretório do idempiere
-```bash
-cd ..
-```
-# Inatalações necessárias para trabalhar com Idempiere:
+
+# Instalações necessárias para trabalhar com Idempiere:
 
 ## Inatalação do postgres 15
 ### Execute os comandos abaixo:
@@ -181,13 +170,13 @@ exit
 
 ## Instalação do maven, execute:
 ```bash
-wget https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz -O maven.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz -O maven.tar.gz
 ```
 ```bash
 tar -xvzf maven.tar.gz
 ```
 ```bash
-sudo mv apache-maven-3.9.8 /opt/maven
+sudo mv apache-maven-3.9.10 /opt/maven
 ```
 
 ### Abra o arquivo bashrc no nano
@@ -221,11 +210,16 @@ sudo apt-get install -y libswt-gtk-4-java
 ```
 
 # Agora, vamos executar o processo de build do projeto iDempiere. Siga os comandos abaixo:
-## Volte para o diretório do idempiere
+
+## Entre no diretório do idempiere
 ```bash
 cd idempiere
 ```
-## Para buildar o projeto, execute:
+### Altere a branch para master
+```bash
+git checkout master
+```
+### Execute para buildar o projeto:
 ```bash
 mvn verify
 ```
