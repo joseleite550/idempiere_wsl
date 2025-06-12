@@ -275,8 +275,10 @@ eclipse/eclipse
 bash RUN_SyncDBDev.sh
 ```
 
+### Para apagar o banco de dados 
+
 ```bash
-psql -U postgres -c "drop database idempiere;"
+psql -U adempiere -d postgres -c "drop database idempiere;"
 ```
 
 
