@@ -270,6 +270,30 @@ eclipse/eclipse
 
 ![image](https://github.com/user-attachments/assets/9ab3f5db-f604-40e8-8c4d-ab18e4610c2e)
 
+
+## Agora vamos iniciar nosso projeto com um plugin separado
+
+### Primeiro entre no reposiório idempiere na sua maquina 
+
+```bash
+cd idempiere
+```
+
+### Após rode os comandos em forma sequencial 
+
+```bash
+git remote add upstream git@github.com:idempiere/idempiere.git
+```
+```bash
+git fetch upstream
+```
+```bash
+git checkout -b release-12 upstream/release-12
+```
+```bash
+mvn verify
+```
+
 ### Para atualizar o banco de dados 
 
 ```bash
