@@ -270,6 +270,31 @@ eclipse/eclipse
 
 ![image](https://github.com/user-attachments/assets/9ab3f5db-f604-40e8-8c4d-ab18e4610c2e)
 
+## Vá em project, desmarque o bulld automatico
+
+![image](https://github.com/user-attachments/assets/fe76c01b-9d6b-4a61-b590-014c5f18078b)
+
+## Vá em file, após em import
+
+![image](https://github.com/user-attachments/assets/999174cb-86da-4c1e-ad03-3234ffb2d5d9)
+
+## Vá em maven > Clique em existing maven files
+
+![image](https://github.com/user-attachments/assets/6271e1a5-8a95-4741-a06f-9da888a3ccaa)
+
+## Vá em Browse ... encontre o local que o idempiere foi clonado e clique em finsh
+
+![image](https://github.com/user-attachments/assets/100ce322-6e0c-446e-8f4b-eb84a8250d0b)
+
+## Encontre o arquivo org.idempiere.p2.targetplatform.target e abra
+
+![image](https://github.com/user-attachments/assets/224e6490-e372-4f25-bb07-58274aecc001)
+
+## Clique na opção
+
+![image](https://github.com/user-attachments/assets/7c130cd2-032a-4dde-8dff-c83a3163ebc1)
+
+## Após a barra de carregamento na direita completar, vá em project e marque o build novamente
 
 ## Agora vamos iniciar nosso projeto com um plugin separado
 
