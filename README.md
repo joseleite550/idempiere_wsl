@@ -219,12 +219,24 @@ cd idempiere
 ```bash
 git checkout master
 ```
-### Execute para buildar o projeto:
+### Execute para preparar o projeto:
+
+```bash
+git remote add upstream git@github.com:idempiere/idempiere.git
+```
+```bash
+git fetch upstream
+```
+```bash
+git checkout -b release-12 upstream/release-12
+```
 ```bash
 mvn verify
 ```
 
-## Criar banco de dados inicial
+# NÃO ESQUECA DE CRIAR UMA BRANCH APÓS ISSO PARA TRABALHAR COM SEU PROJETO A PARTIR DA BRANCH RELEASE-12
+
+## Inicio Criar banco de dados inicial
 ### Caso o comando solicitar utilizar senha criada na criação do usuario ubuntu
 ```bash
 sudo su - postgres
@@ -253,6 +265,16 @@ jar xvf ~/idempiere/org.adempiere.server-feature/data/seed/Adempiere_pg.jar
 ### Caso o comando solicitar senha utilizar adempiere
 ```bash
 psql -d idempiere -U adempiere -f Adempiere_pg.dmp
+```
+### Para atualizar o banco de dados 
+```bash
+cd
+```
+```bash
+cd idempiere
+```
+```bash
+bash RUN_SyncDBDev.sh
 ```
 
 ## Abrindo Eclipse
@@ -327,37 +349,11 @@ eclipse/eclipse
 
 ## Agora acesse http://localhost:8080
 
-## USer SuperUser
+## User SuperUser
 ## Password System
 
-### Primeiro entre no reposiório idempiere na sua maquina 
 
-```bash
-cd idempiere
-```
-
-### Após rode os comandos em forma sequencial 
-
-```bash
-git remote add upstream git@github.com:idempiere/idempiere.git
-```
-```bash
-git fetch upstream
-```
-```bash
-git checkout -b release-12 upstream/release-12
-```
-```bash
-mvn verify
-```
-
-### Para atualizar o banco de dados 
-
-```bash
-bash RUN_SyncDBDev.sh
-```
-
-### Para apagar o banco de dados 
+### Se necessário apagar o banco de dados, execute, após para criar um banco novamente execute o passo de criação do banco incial
 
 ```bash
 psql -U adempiere -d postgres -c "drop database idempiere;"
