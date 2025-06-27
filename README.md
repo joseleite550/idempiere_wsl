@@ -298,6 +298,38 @@ eclipse/eclipse
 
 ## Agora vamos iniciar nosso projeto com um plugin separado
 
+## Vá em Debug configurations 
+
+![image](https://github.com/user-attachments/assets/0edd1f8e-eec4-4415-9c58-265d95f15599)
+
+## Encontre dentro de eclipse application a opção install.app, após clique em debug
+
+![image](https://github.com/user-attachments/assets/64250a00-c8b2-4bc0-a79c-fcae2f0c1d66)
+
+## Preencha a janela aberta e clique em save
+
+![image](https://github.com/user-attachments/assets/990b8715-f891-48e0-b33d-da3ace962ecc)
+
+### Deverá ter essa saida no console
+
+![image](https://github.com/user-attachments/assets/7021699f-785c-44f8-a2e8-9afb0c91b51e)
+
+## Vá em Debug configurations novamente
+
+![image](https://github.com/user-attachments/assets/0edd1f8e-eec4-4415-9c58-265d95f15599)
+
+## Encontre dentro de eclipse application a opção server.product após clique em debug
+
+### Deverá ter essa saida no console
+
+![image](https://github.com/user-attachments/assets/21d72fcd-6145-4527-93bb-bc8ea72bad51)
+
+
+## Agora acesse http://localhost:8080
+
+## USer SuperUser
+## Password System
+
 ### Primeiro entre no reposiório idempiere na sua maquina 
 
 ```bash
